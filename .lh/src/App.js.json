@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 4,
+            "activePatchIndex": 5,
             "patches": [
                 {
                     "date": 1660111075196,
@@ -24,6 +24,10 @@
                 {
                     "date": 1660975817323,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,10 @@\n import Sjoin from './components/Sjoin';\n import Signin from './components/Signin';\n import Ppolicy from './components/Ppolicy';\n import TermsofS from './components/TermsofS';\n+import Settings from './components/Settings';\n+import Billing from './components/Billing';\n import { UserAuthContextProvider } from './context/UserAuthContext';\n import { BrowserRouter,Routes,Route} from \"react-router-dom\";\n function App() {\n   return (\n@@ -18,8 +20,11 @@\n       <Route path=\"/sjoin\" element={<Sjoin/>}></Route>\n       <Route path=\"/signin\" element={<Signin/>}></Route>\n       <Route path=\"/policy\" element={<Ppolicy/>}></Route>\n       <Route path=\"/ftos\" element={<TermsofS/>}></Route>\n+      <Route path=\"/set\" element={<Settings/>}></Route>\n+      <Route path=\"/bill\" element={<Billing/>}></Route>\n+    \n     </Routes>\n     </UserAuthContextProvider>\n   </BrowserRouter>\n \n"
+                },
+                {
+                    "date": 1661094743912,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,13 +7,13 @@\n import TermsofS from './components/TermsofS';\n import Settings from './components/Settings';\n import Billing from './components/Billing';\n import { UserAuthContextProvider } from './context/UserAuthContext';\n-import { BrowserRouter,Routes,Route} from \"react-router-dom\";\n+import { HashRouter,Routes,Route} from \"react-router-dom\";\n function App() {\n   return (\n     <div>\n-  <BrowserRouter>\n+  <HashRouter>\n   <UserAuthContextProvider>\n     <Routes>\n       <Route path=\"/\" element={<Home/>}></Route>\n       <Route path=\"/bjoin\" element={<Bjoin/>}></Route>\n@@ -25,9 +25,9 @@\n       <Route path=\"/bill\" element={<Billing/>}></Route>\n     \n     </Routes>\n     </UserAuthContextProvider>\n-  </BrowserRouter>\n+  </HashRouter>\n \n     </div>\n     \n    \n"
                 }
             ],
             "date": 1660111075196,

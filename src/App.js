@@ -8,11 +8,11 @@ import TermsofS from './components/TermsofS';
 import Settings from './components/Settings';
 import Billing from './components/Billing';
 import { UserAuthContextProvider } from './context/UserAuthContext';
-import { BrowserRouter,Routes,Route} from "react-router-dom";
+import { HashRouter,Routes,Route} from "react-router-dom";
 function App() {
   return (
     <div>
-  <BrowserRouter>
+  <HashRouter>
   <UserAuthContextProvider>
     <Routes>
       <Route path="/" element={<Home/>}></Route>
@@ -26,7 +26,7 @@ function App() {
     
     </Routes>
     </UserAuthContextProvider>
-  </BrowserRouter>
+  </HashRouter>
 
     </div>
     
