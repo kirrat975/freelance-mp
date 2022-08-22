@@ -136,3 +136,96 @@ font-weight: bold;
 
     
 }
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .billcont{
+    border: 5px solid black;
+    border-radius: 0px;
+    width:300px;
+    position: relative;
+    left:3%;
+    margin-top: 10px;
+
+  }
+  .biltabs li{
+    display:flex;
+    font-size: 14px;
+   margin-left: 50px;
+    
+
+  }
+  .smenu-tabs select{
+    display: flex;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    width:150px;
+  }
+  .smenu #sinv{
+    width:250px;
+    margin-top: 20px;
+    font-size: 12px;
+    position: relative;
+    right: 5%;
+  }
+  .sbtable{
+   display: none;
+   
+  }
+  .invoice img{
+    width:200px;
+    height: 100px;
+  }
+  
+   
+    
+  }
+  
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    
+    .billcont{
+        border: 5px solid black;
+        border-radius: 0px;
+        width:200px;
+        position: relative;
+        right:2%;
+        margin-top: 10px;
+    
+      }
+      .biltabs li{
+        display:flex;
+        font-size: 14px;
+       margin-left: 20px;
+        
+    
+      }
+      .smenu-tabs{
+        position: relative;
+        right: 8%;
+      }
+      .smenu-tabs select{
+        display: flex;
+        margin-bottom: 10px;
+        width:150px;
+      }
+      .smenu #sinv{
+        width:180px;
+        margin-top: 20px;
+        font-size: 8px;
+        position: relative;
+        right: 20%;
+        font-weight: bold;
+      }
+      .sbtable{
+       display: none;
+       
+      }
+      .invoice{
+        padding: 0;
+      }
+      .invoice img{
+        width:150px;
+        height: 100px;
+      }
+    
+  }

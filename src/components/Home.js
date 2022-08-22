@@ -13,7 +13,7 @@ import Carousel from 'react-bootstrap/Carousel';
 function Home() {
   const navigate=useNavigate();
   return (
-    <div className='row-md-6 align-items-center p-2'>
+    <div className='row-lg-6 align-items-center p-4'>
     <div className='hohead'>
     <header>
       <nav className="navbar navbar-light bg-dark p-1">
@@ -43,6 +43,7 @@ function Home() {
 </header>
     </div>
    <div className='p-4'>
+   <h1 className='topf'>Top Freelancers</h1>
   <div className='car-cont'>
   <Carousel>
       <Carousel.Item>

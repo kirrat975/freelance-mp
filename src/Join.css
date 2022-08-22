@@ -5,7 +5,7 @@
 }
 
 .bjcont{
-  padding-bottom: 100px!important;
+  padding-bottom: 20px!important;
   background-color: palegoldenrod !important;
   position: relative;
   border: 10px solid black;
@@ -14,40 +14,7 @@
   align-items: center;
     
 }
-.ispan{
-  
-    padding:10px;
-  }
-  #fsep{
-    height: 12px;
-    margin: 15px 0 20px;
-    text-align: center;
-    border-bottom: 1px solid #e4e5e7;
-    font-weight: bold;
-  }
 
-  #gbtn,#fbtn,#lbtn{
-    color:black;
-    background-color:mintcream;
-    font-weight: bold;
-    padding:5px;
-    text-align: center;
-    width:300px;
-    margin-left: 50px;
-    margin-top: 10px;
-    border: 3px solid black;
-    letter-spacing: 2px;
-   
-  }
-  #gbtn:hover{
-    background-color: lightsteelblue;
-  }
-  #fbtn:hover{
-    background-color: lightsteelblue;
-  }
-  #lbtn:hover{
-    background-color: lightsteelblue;
-  }
   .subtn{
     width:300px;
     background-color: mediumseagreen;
@@ -113,4 +80,78 @@
     font-style: italic;
     font-family: cursive;
   }
+  @media (min-width: 481px) and (max-width: 767px) {
+   .p-5{
+    padding: 5px !important;
+   }
+    .bjcont{
+      display: inline-block;
+      position: relative;
+      left:10%;
+      margin-top: 10px;
+    }
+    .d-flex{
+      flex-direction: column;
+    }
+    .m-5{
+      margin: 10px!important;
+    }
+    .sbs{
+      padding:5px;
+      width:350px;
+      height: 250px;
+    }
+    .aform{
+      width:350px;
+    }
+   #jhead{
+    margin-top: 5px;
+   }
+   .p-2{
+    padding: 10px!important;
+   }
+   .subtn{
+    margin-left: 20px;
+   }
+    
+  }
   
+  
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    
+    .p-5{
+      padding: 20px !important;
+     }
+      .bjcont{
+        display: inline-block;
+        position: relative;
+        right:4%;
+        
+        margin-top: 20px;
+      }
+      .d-flex{
+        flex-direction: column;
+      }
+      .m-5{
+        margin: 10px!important;
+      }
+      .sbs{
+        padding:5px;
+        width:350px;
+        height: 250px;
+      }
+      .aform{
+        width:350px;
+      }
+     #jhead{
+      margin-top: 5px;
+     }
+     .p-2{
+      padding: 10px!important;
+     }
+     .subtn{
+      margin-left: 20px;
+     }
+    
+  }

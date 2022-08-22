@@ -12,7 +12,7 @@ function Signin() {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
   const [password, setPassword] = useState("");
-  const { logIn,signInwG } = useUserAuth();
+  const { logIn } = useUserAuth();
 
   const navigate = useNavigate();
 
@@ -28,16 +28,7 @@ function Signin() {
     }
     
   };
-  const handleGS = async (e) => {
-    e.preventDefault();
-    setError("");
-    try {
-      await signInwG();
-      navigate("/");
-    } catch (err) {
-      setError(err.message);
-    }
-  };
+  
   
   return (
    
@@ -46,32 +37,26 @@ function Signin() {
             <div className= "d-flex gap-3 m-5">
     
             <div>
-              <img src={signin} width="600px" height="540px" className='sbs'/>
+              <img src={signin} width="600px" height="435
+              px" className='sbs'/>
             </div>
             <div className= "col-sm-6 ">
             {error && <Alert variant="danger">{error}</Alert>}
             <form onSubmit={handleSubmit} className="aform">
             <div>
             <h1 id='jhead'>Sign In</h1>
-            <div className='d-flex flex-column gap-2 '>
-            <div><Button onClick={handleGS} variant="default" id="gbtn" ><span className='ispan'><FcGoogle/></span> Sign In with Google</Button></div>
-            <div><Button variant="default" id="fbtn" ><span className='ispan'><SocialIcon network='facebook' style={{ height: 25, width: 25 }}/>
-            </span>Sign In with Facebook</Button></div>
             </div>
 
-            <div id="fsep"><p>OR</p></div>
-            </div>
-
-        <div className="mb-3 p-2">
+        <div className="mb-3 p-3">
           <input type="email" className="form-control" placeholder="Enter email address" required onChange={(e) => setEmail(e.target.value)}/>
         </div>
 
 
-        <div className="mb-3 p-2">
+        <div className="mb-3 p-3">
           <input type="password" className="form-control" placeholder="Enter your password" required  onChange={(e) => setPassword(e.target.value)}/>
         </div>
        
-        <div className="d-grid p-2">
+        <div className="d-grid">
           
           
           <Button type="submit" variant="default" className="subtn">

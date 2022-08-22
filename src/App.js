@@ -9,6 +9,8 @@ import Settings from './components/Settings';
 import Billing from './components/Billing';
 import { UserAuthContextProvider } from './context/UserAuthContext';
 import { HashRouter,Routes,Route} from "react-router-dom";
+
+
 function App() {
   return (
     <div>

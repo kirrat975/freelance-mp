@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 5,
+            "activePatchIndex": 12,
             "patches": [
                 {
                     "date": 1660111075196,
@@ -28,6 +28,34 @@
                 {
                     "date": 1661094743912,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,13 +7,13 @@\n import TermsofS from './components/TermsofS';\n import Settings from './components/Settings';\n import Billing from './components/Billing';\n import { UserAuthContextProvider } from './context/UserAuthContext';\n-import { BrowserRouter,Routes,Route} from \"react-router-dom\";\n+import { HashRouter,Routes,Route} from \"react-router-dom\";\n function App() {\n   return (\n     <div>\n-  <BrowserRouter>\n+  <HashRouter>\n   <UserAuthContextProvider>\n     <Routes>\n       <Route path=\"/\" element={<Home/>}></Route>\n       <Route path=\"/bjoin\" element={<Bjoin/>}></Route>\n@@ -25,9 +25,9 @@\n       <Route path=\"/bill\" element={<Billing/>}></Route>\n     \n     </Routes>\n     </UserAuthContextProvider>\n-  </BrowserRouter>\n+  </HashRouter>\n \n     </div>\n     \n    \n"
+                },
+                {
+                    "date": 1661102569673,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,11 +8,32 @@\n import Settings from './components/Settings';\n import Billing from './components/Billing';\n import { UserAuthContextProvider } from './context/UserAuthContext';\n import { HashRouter,Routes,Route} from \"react-router-dom\";\n+\n+import MediaQueryReact from 'media-query-react';\n function App() {\n+  const screenSize = {\n+    mobile: { \n+      minWidth: 320,\n+      maxWidth: 480,\n+    },\n+    mobileLandscape: {\n+      minWidth: 481,\n+      maxWidth: 767,\n+    },\n+    tablet: {\n+      minWidth: 768,\n+      maxWidth: 1024,\n+    },\n+    desktop: {\n+      minWidth: 1025,\n+      maxWidth: 2500,\n+    },\n+  };\n   return (\n     <div>\n+    <MediaQueryReact mediaQueries={screenSize}>\n   <HashRouter>\n   <UserAuthContextProvider>\n     <Routes>\n       <Route path=\"/\" element={<Home/>}></Route>\n@@ -26,9 +47,9 @@\n     \n     </Routes>\n     </UserAuthContextProvider>\n   </HashRouter>\n-\n+</MediaQueryReact>\n     </div>\n     \n    \n   );\n"
+                },
+                {
+                    "date": 1661102767141,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n import Billing from './components/Billing';\n import { UserAuthContextProvider } from './context/UserAuthContext';\n import { HashRouter,Routes,Route} from \"react-router-dom\";\n \n-import MediaQueryReact from 'media-query-react';\n+import { ForDevice } from 'media-query-react';\n function App() {\n   const screenSize = {\n     mobile: { \n       minWidth: 320,\n@@ -31,9 +31,9 @@\n     },\n   };\n   return (\n     <div>\n-    <MediaQueryReact mediaQueries={screenSize}>\n+    <ForDevice deviceName={['mobile','tablet','desktop']}>\n   <HashRouter>\n   <UserAuthContextProvider>\n     <Routes>\n       <Route path=\"/\" element={<Home/>}></Route>\n@@ -47,9 +47,9 @@\n     \n     </Routes>\n     </UserAuthContextProvider>\n   </HashRouter>\n-</MediaQueryReact>\n+</ForDevice>\n     </div>\n     \n    \n   );\n"
+                },
+                {
+                    "date": 1661102857704,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,31 +9,12 @@\n import Billing from './components/Billing';\n import { UserAuthContextProvider } from './context/UserAuthContext';\n import { HashRouter,Routes,Route} from \"react-router-dom\";\n \n-import { ForDevice } from 'media-query-react';\n+\n function App() {\n-  const screenSize = {\n-    mobile: { \n-      minWidth: 320,\n-      maxWidth: 480,\n-    },\n-    mobileLandscape: {\n-      minWidth: 481,\n-      maxWidth: 767,\n-    },\n-    tablet: {\n-      minWidth: 768,\n-      maxWidth: 1024,\n-    },\n-    desktop: {\n-      minWidth: 1025,\n-      maxWidth: 2500,\n-    },\n-  };\n   return (\n     <div>\n-    <ForDevice deviceName={['mobile','tablet','desktop']}>\n   <HashRouter>\n   <UserAuthContextProvider>\n     <Routes>\n       <Route path=\"/\" element={<Home/>}></Route>\n@@ -47,9 +28,9 @@\n     \n     </Routes>\n     </UserAuthContextProvider>\n   </HashRouter>\n-</ForDevice>\n+\n     </div>\n     \n    \n   );\n"
+                },
+                {
+                    "date": 1661103502026,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,13 +8,14 @@\n import Settings from './components/Settings';\n import Billing from './components/Billing';\n import { UserAuthContextProvider } from './context/UserAuthContext';\n import { HashRouter,Routes,Route} from \"react-router-dom\";\n+import { MediaQueryProvider } from 'react-media-query-hoc';\n \n-\n function App() {\n   return (\n     <div>\n+    <MediaQueryProvider\n   <HashRouter>\n   <UserAuthContextProvider>\n     <Routes>\n       <Route path=\"/\" element={<Home/>}></Route>\n@@ -28,9 +29,9 @@\n     \n     </Routes>\n     </UserAuthContextProvider>\n   </HashRouter>\n-\n+></MediaQueryProvider>\n     </div>\n     \n    \n   );\n"
+                },
+                {
+                    "date": 1661103516960,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n \n function App() {\n   return (\n     <div>\n-    <MediaQueryProvider\n+    <MediaQueryProvider>\n   <HashRouter>\n   <UserAuthContextProvider>\n     <Routes>\n       <Route path=\"/\" element={<Home/>}></Route>\n@@ -29,9 +29,9 @@\n     \n     </Routes>\n     </UserAuthContextProvider>\n   </HashRouter>\n-></MediaQueryProvider>\n+</MediaQueryProvider>\n     </div>\n     \n    \n   );\n"
+                },
+                {
+                    "date": 1661103731442,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,11 +11,15 @@\n import { HashRouter,Routes,Route} from \"react-router-dom\";\n import { MediaQueryProvider } from 'react-media-query-hoc';\n \n function App() {\n+  const customQueries = {\n+    verySmall: 'screen and (max-width: 300px)',\n+    someOtherMediaQuery: 'screen and (min-width: 301px)',\n+  };\n   return (\n     <div>\n-    <MediaQueryProvider>\n+    <MediaQueryProvider queries={customQueries}>\n   <HashRouter>\n   <UserAuthContextProvider>\n     <Routes>\n       <Route path=\"/\" element={<Home/>}></Route>\n"
+                },
+                {
+                    "date": 1661103770917,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,18 +8,13 @@\n import Settings from './components/Settings';\n import Billing from './components/Billing';\n import { UserAuthContextProvider } from './context/UserAuthContext';\n import { HashRouter,Routes,Route} from \"react-router-dom\";\n-import { MediaQueryProvider } from 'react-media-query-hoc';\n \n+\n function App() {\n-  const customQueries = {\n-    verySmall: 'screen and (max-width: 300px)',\n-    someOtherMediaQuery: 'screen and (min-width: 301px)',\n-  };\n   return (\n     <div>\n-    <MediaQueryProvider queries={customQueries}>\n   <HashRouter>\n   <UserAuthContextProvider>\n     <Routes>\n       <Route path=\"/\" element={<Home/>}></Route>\n@@ -33,9 +28,9 @@\n     \n     </Routes>\n     </UserAuthContextProvider>\n   </HashRouter>\n-</MediaQueryProvider>\n+\n     </div>\n     \n    \n   );\n"
                 }
             ],
             "date": 1660111075196,
