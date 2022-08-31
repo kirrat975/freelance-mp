@@ -2,6 +2,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  sendPasswordResetEmail,
   onAuthStateChanged,
   signOut,
   
@@ -29,6 +30,10 @@ export function UserAuthContextProvider({ children }) {
   function logOut() {
     return signOut(auth);
   }
+  
+  function passwordReset(email){
+    return sendPasswordResetEmail(auth,email);
+  }
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentuser) => {
@@ -43,7 +48,7 @@ export function UserAuthContextProvider({ children }) {
 
   return (
     <userAuthContext.Provider
-      value={{ user,logIn,signUp, logOut }}
+      value={{ user,logIn,signUp, logOut, passwordReset }}
     >
       {children}
     </userAuthContext.Provider>

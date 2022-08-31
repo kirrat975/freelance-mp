@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/components/Sellerdash.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1661872863979,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1661872863979,
+            "name": "Commit-0",
+            "content": "#sellh{\r\n    -webkit-text-stroke-color: darkslateblue;\r\n    -webkit-text-stroke-width:2px;\r\n    text-transform: uppercase;\r\n    letter-spacing: 3px;\r\n    text-align: center;\r\n}\r\n.tabpro{\r\n   border:3px solid black;\r\n   padding:10px;\r\n  width: 100%;\r\n  overflow: hidden;\r\n  margin-top: 20px;\r\n}\r\n.tabpro th{\r\n    text-transform: uppercase;\r\n    text-align: center;\r\n    margin-right: 10px;\r\n    border: 1px solid black;\r\n    width:30%;\r\n    padding: 5px;\r\n    background-color: lightgreen;\r\n    letter-spacing: 3px;\r\n   \r\n}\r\n.tabpro tr td{\r\n    margin-right: 20px;\r\n    border: 1px solid black;\r\n    padding: 3px;\r\n    text-align: center;\r\n    width:30%;\r\n    font-weight: bold;\r\n    letter-spacing: 2px;\r\n    background-color: lightskyblue;\r\n    \r\n}\r\n#bid{\r\n    padding: 5px;\r\n    background-color:green;\r\n    font-weight: bold;\r\n    width:60px;\r\n    border-radius: 20px;\r\n}\r\n.tabpro td:hover{\r\n    background-color: khaki;\r\n}\r\n#bid:hover{\r\n    background-color: lightsalmon;\r\n}\r\n"
+        }
+    ]
+}

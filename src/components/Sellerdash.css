@@ -1,0 +1,49 @@
+#sellh{
+    -webkit-text-stroke-color: darkslateblue;
+    -webkit-text-stroke-width:2px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+}
+.tabpro{
+   border:3px solid black;
+   padding:10px;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 20px;
+}
+.tabpro th{
+    text-transform: uppercase;
+    text-align: center;
+    margin-right: 10px;
+    border: 1px solid black;
+    width:30%;
+    padding: 5px;
+    background-color: lightgreen;
+    letter-spacing: 3px;
+   
+}
+.tabpro tr td{
+    margin-right: 20px;
+    border: 1px solid black;
+    padding: 3px;
+    text-align: center;
+    width:30%;
+    font-weight: bold;
+    letter-spacing: 2px;
+    background-color: lightskyblue;
+    
+}
+#bid{
+    padding: 5px;
+    background-color:green;
+    font-weight: bold;
+    width:60px;
+    border-radius: 20px;
+}
+.tabpro td:hover{
+    background-color: khaki;
+}
+#bid:hover{
+    background-color: lightsalmon;
+}

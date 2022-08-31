@@ -1,0 +1,71 @@
+.bprof{
+    position: relative;
+    left:25%;
+    top:5%;
+}
+.bcard{
+    border: 5px solid black;
+    padding: 10px;
+    margin: 18px;
+    text-align:center;
+    border-radius: 4px;
+    box-shadow: 5px 5px 5px 5px seagreen;
+   
+    transition:transform ease 0.5s;
+    background-image:linear-gradient(109.6deg, rgb(0, 204, 130) 11.2%, rgb(58, 181, 46) 91.7%);
+
+}
+#buid{
+    text-align: center;
+    position: relative;
+    right: 25%;
+    -webkit-text-stroke-color: blue;
+    letter-spacing: 20px;
+    font-size: 50px;
+    -webkit-text-stroke-width:1px;
+    text-transform: uppercase;
+
+}
+#bname{
+    font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width:1px;
+}
+table{
+    border: 3px solid black;
+    margin-top: 5px;
+    padding: 5px;
+}
+.bcard th{
+    width:30%;
+    border: 1px solid black;
+    color:midnightblues;
+    letter-spacing: 2px;
+    padding: 5px;
+    text-transform: capitalize;
+    font-size: 18px;
+}
+.bcard tr{
+    width:30%;
+    border: 1px solid black;
+    padding: 5px;
+    
+}
+.bcard td{
+    text-transform: lowercase;
+    font-family: cursive;
+    font-weight: 400;
+    width:30%;
+    letter-spacing: 3px;
+    padding: 5px;
+    color:black;
+    border: 1px solid black;
+    font-size: 16px;
+
+    
+   
+    
+}

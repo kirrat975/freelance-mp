@@ -2,8 +2,6 @@ import React,{useState}from 'react';
 import '../Join.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
-import { FcGoogle } from "react-icons/fc";
-import { SocialIcon } from 'react-social-icons';
 import { Alert } from 'react-bootstrap';
 import { Link,useNavigate} from "react-router-dom";
 import { useUserAuth } from "../context/UserAuthContext";
@@ -49,7 +47,6 @@ function Sjoin() {
       name:name,
       phone:phone,
       service:service,
-      orders:orders,
       rating:rating,
       }
       axios.post('http://localhost:9999/registerSeller', register)
@@ -99,9 +96,6 @@ function Sjoin() {
           <input type="text"  value={service}className="form-control" placeholder="Enter your service" onChange={(e) => setserv(e.target.value)}/>
         </div>
 
-        <div className="mb-3 p-2">
-          <input type="number" value={orders} className="form-control" placeholder="Enter your total no: of completed orders " onChange={(e) => setord(e.target.value)}/>
-        </div>
 
         <div className="mb-3 p-2">
           <input type="number" value={rating} className="form-control" placeholder="Enter your rating" onChange={(e) => setrat(e.target.value)}/>

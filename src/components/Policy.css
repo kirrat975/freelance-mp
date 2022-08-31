@@ -21,25 +21,3 @@
 #pcont p{
     font-weight: 400;
 }
-@media (min-width: 481px) and (max-width: 767px) {
-  .sftcont{
-   
-    border:5px solid black!important;
-    padding: 10px !important;
-    border-radius:0px !important;
-   
-  }
-  .sftcont h1{
-    font-size: 20px;
-  }
-   
-    
-  }
-  
-  
-  
-  @media (min-width: 320px) and (max-width: 480px) {
-    
-    
-    
-  }

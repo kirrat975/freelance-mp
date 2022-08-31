@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 12,
+            "activePatchIndex": 15,
             "patches": [
                 {
                     "date": 1660111075196,
@@ -56,6 +56,18 @@
                 {
                     "date": 1661103770917,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,18 +8,13 @@\n import Settings from './components/Settings';\n import Billing from './components/Billing';\n import { UserAuthContextProvider } from './context/UserAuthContext';\n import { HashRouter,Routes,Route} from \"react-router-dom\";\n-import { MediaQueryProvider } from 'react-media-query-hoc';\n \n+\n function App() {\n-  const customQueries = {\n-    verySmall: 'screen and (max-width: 300px)',\n-    someOtherMediaQuery: 'screen and (min-width: 301px)',\n-  };\n   return (\n     <div>\n-    <MediaQueryProvider queries={customQueries}>\n   <HashRouter>\n   <UserAuthContextProvider>\n     <Routes>\n       <Route path=\"/\" element={<Home/>}></Route>\n@@ -33,9 +28,9 @@\n     \n     </Routes>\n     </UserAuthContextProvider>\n   </HashRouter>\n-</MediaQueryProvider>\n+\n     </div>\n     \n    \n   );\n"
+                },
+                {
+                    "date": 1661236539479,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n import Ppolicy from './components/Ppolicy';\n import TermsofS from './components/TermsofS';\n import Settings from './components/Settings';\n import Billing from './components/Billing';\n+import BuyerHp from './components/BuyerHp';\n import { UserAuthContextProvider } from './context/UserAuthContext';\n import { HashRouter,Routes,Route} from \"react-router-dom\";\n \n \n@@ -24,8 +25,9 @@\n       <Route path=\"/policy\" element={<Ppolicy/>}></Route>\n       <Route path=\"/ftos\" element={<TermsofS/>}></Route>\n       <Route path=\"/set\" element={<Settings/>}></Route>\n       <Route path=\"/bill\" element={<Billing/>}></Route>\n+      <Route path=\"/buyhp\" element={<BuyerHp/>}></Route>\n     \n     </Routes>\n     </UserAuthContextProvider>\n   </HashRouter>\n"
+                },
+                {
+                    "date": 1661325027905,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n import TermsofS from './components/TermsofS';\n import Settings from './components/Settings';\n import Billing from './components/Billing';\n import BuyerHp from './components/BuyerHp';\n+import PostPR from './components/PostPR';\n import { UserAuthContextProvider } from './context/UserAuthContext';\n import { HashRouter,Routes,Route} from \"react-router-dom\";\n \n \n@@ -26,8 +27,9 @@\n       <Route path=\"/ftos\" element={<TermsofS/>}></Route>\n       <Route path=\"/set\" element={<Settings/>}></Route>\n       <Route path=\"/bill\" element={<Billing/>}></Route>\n       <Route path=\"/buyhp\" element={<BuyerHp/>}></Route>\n+      <Route path=\"/postpr\" element={<PostPR/>}></Route>\n     \n     </Routes>\n     </UserAuthContextProvider>\n   </HashRouter>\n"
+                },
+                {
+                    "date": 1661752652983,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,10 @@\n import Settings from './components/Settings';\n import Billing from './components/Billing';\n import BuyerHp from './components/BuyerHp';\n import PostPR from './components/PostPR';\n+import SellerDash from './components/SellerDash';\n+import BProfile from './components/BProfile';\n import { UserAuthContextProvider } from './context/UserAuthContext';\n import { HashRouter,Routes,Route} from \"react-router-dom\";\n \n \n@@ -27,9 +29,11 @@\n       <Route path=\"/ftos\" element={<TermsofS/>}></Route>\n       <Route path=\"/set\" element={<Settings/>}></Route>\n       <Route path=\"/bill\" element={<Billing/>}></Route>\n       <Route path=\"/buyhp\" element={<BuyerHp/>}></Route>\n+      <Route path=\"/selld\" element={<SellerDash/>}></Route>\n       <Route path=\"/postpr\" element={<PostPR/>}></Route>\n+      <Route path=\"/buprof\" element={<BProfile/>}></Route>\n     \n     </Routes>\n     </UserAuthContextProvider>\n   </HashRouter>\n"
                 }
             ],
             "date": 1660111075196,

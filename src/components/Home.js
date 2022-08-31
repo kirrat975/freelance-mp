@@ -35,8 +35,8 @@ function Home() {
 <li><button    onClick={()=>navigate('/signin')}>Sign In</button></li>
 <li><button    onClick={()=>navigate('/policy')}>Private Policy</button></li>
 <li><button    onClick={()=>navigate('/ftos')}>Terms Of Services</button></li>
-<li><button    onClick={()=>navigate('/set')}>Settings</button></li>
-<li><button    onClick={()=>navigate('/bill')}>Billing</button></li>
+
+
 </ul>
  
 </nav>

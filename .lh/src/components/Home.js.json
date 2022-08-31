@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 45,
+            "activePatchIndex": 47,
             "patches": [
                 {
                     "date": 1660316342326,
@@ -188,6 +188,14 @@
                 {
                     "date": 1661020309716,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n import Carousel from 'react-bootstrap/Carousel'; \r\n function Home() {\r\n   const navigate=useNavigate();\r\n   return (\r\n-    <div className='row-md-6 align-items-center'>\r\n+    <div className='row-md-6 align-items-center p-2'>\r\n     <div className='hohead'>\r\n     <header>\r\n       <nav className=\"navbar navbar-light bg-dark p-1\">\r\n       <div className='hlogo'>\r\n"
+                },
+                {
+                    "date": 1661236420796,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import React from 'react';\r\n+import './Home.css';\r\n import 'bootstrap/dist/css/bootstrap.min.css';\r\n import { Link,useNavigate} from \"react-router-dom\";\r\n \r\n import logo from '../logo.png';\r\n@@ -11,9 +12,9 @@\n import Carousel from 'react-bootstrap/Carousel'; \r\n function Home() {\r\n   const navigate=useNavigate();\r\n   return (\r\n-    <div className='row-md-6 align-items-center p-2'>\r\n+    <div className='row-lg-6 align-items-center p-4'>\r\n     <div className='hohead'>\r\n     <header>\r\n       <nav className=\"navbar navbar-light bg-dark p-1\">\r\n       <div className='hlogo'>\r\n@@ -35,14 +36,16 @@\n <li><button    onClick={()=>navigate('/policy')}>Private Policy</button></li>\r\n <li><button    onClick={()=>navigate('/ftos')}>Terms Of Services</button></li>\r\n <li><button    onClick={()=>navigate('/set')}>Settings</button></li>\r\n <li><button    onClick={()=>navigate('/bill')}>Billing</button></li>\r\n+<li><button    onClick={()=>navigate('/buyhp')}>Buyer HomePage</button></li>\r\n </ul>\r\n  \r\n </nav>\r\n </header>\r\n     </div>\r\n    <div className='p-4'>\r\n+   <h1 className='topf'>Top Freelancers</h1>\r\n   <div className='car-cont'>\r\n   <Carousel>\r\n       <Carousel.Item>\r\n         <img\r\n"
+                },
+                {
+                    "date": 1661324796429,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,10 +34,8 @@\n <li><button    onClick={()=>navigate('/sjoin')}>Join as Seller</button></li>\r\n <li><button    onClick={()=>navigate('/signin')}>Sign In</button></li>\r\n <li><button    onClick={()=>navigate('/policy')}>Private Policy</button></li>\r\n <li><button    onClick={()=>navigate('/ftos')}>Terms Of Services</button></li>\r\n-<li><button    onClick={()=>navigate('/set')}>Settings</button></li>\r\n-<li><button    onClick={()=>navigate('/bill')}>Billing</button></li>\r\n <li><button    onClick={()=>navigate('/buyhp')}>Buyer HomePage</button></li>\r\n </ul>\r\n  \r\n </nav>\r\n"
                 }
             ],
             "date": 1660316342326,
